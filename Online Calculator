@@ -1,0 +1,39 @@
+def add(x, y):
+    return x + y
+    
+def sub(x, y):
+    return x - y
+    
+def mul(x, y):
+    return x * y
+    
+def div(x, y):
+    if y == 0:
+        return "ERROR! Division by zero!"
+    return x / y
+    
+print("Online Calculator")
+print("----------------")
+n1 = float(input("Enter the first number: "))
+n2 = float(input("Enter the second number: "))
+print("----------------")
+print("Choose an operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+operation = int(input("Enter your choice (1/2/3/4): "))
+if operation == 1:
+    result = add(n1, n2)
+elif operation == 2:
+    result = sub(n1, n2)
+elif operation == 3:
+    result = mul(n1, n2)
+elif operation == 4:
+    result = div(n1, n2)
+else:
+    result = "Error: Invalid operation choice!"
+    
+print("----------------")
+print("Result:", result)
